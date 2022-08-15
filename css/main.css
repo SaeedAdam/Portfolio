@@ -670,6 +670,9 @@ hr {
 }
 
 /*----------- About -----------*/
+.about-area {
+  padding-top:10px;
+}
 .about-area .about-img img {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.18);

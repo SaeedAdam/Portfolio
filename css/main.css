@@ -835,6 +835,10 @@ hr {
 }
 
 /*----------- Services -----------*/
+.services-area {
+  padding: 10px 38px;
+}
+
 .services-area .single-service {
   background-color: #fff;
   border: 1px solid rgba(214, 214, 214, 0.8);

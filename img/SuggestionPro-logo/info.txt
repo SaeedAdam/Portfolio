@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: Aganè 65 (Bold) sign
+font link: https://www.graphicpear.com/agane-free-font/
+font author: Danilo De Marco
+font author site: http://www.danilodemarco.com/
+
+
+icon designer: Michal Kuk
+icon designer link: /michalkuk
+        
+{"bg":"transparent","icon-gradient-0":"#51A4FB","icon-gradient-1":"#51A4FB","font":"#000000","slogan":"#141414"}
+      

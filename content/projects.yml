@@ -1,0 +1,11 @@
+title: Projects
+description: A selection of applications I've built on my own, from issue tracking to community feedback platforms. Each one links to its source code on GitHub.
+links:
+  - label: "Get in touch"
+    to: "/#contact"
+    color: "neutral"
+  - label: "GitHub profile"
+    to: "https://github.com/SaeedAdam"
+    target: "_blank"
+    variant: "outline"
+    color: "neutral"

@@ -1,0 +1,6 @@
+title: TrackPro
+description: An issue tracking system for teams, covering projects, tickets, priorities and role-based access for admins, project managers and developers, with a dashboard that charts tickets by priority and status.
+image: /images/projects/TrackPro/TrackPro-2.jpeg
+url: "https://github.com/SaeedAdam/BugTrackerApp"
+tags: ["ASP.NET Core MVC", "C#", "PostgreSQL", "Bootstrap"]
+date: "2022"

@@ -1,0 +1,5 @@
+# <PLACEHOLDER: confirm saeedadam.com is still hosted on Netlify. The contact
+# form relies on Netlify Forms; on other hosts it needs a different backend.>
+[build]
+  command = "pnpm run generate"
+  publish = ".output/public"

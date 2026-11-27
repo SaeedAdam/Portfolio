@@ -1,0 +1,6 @@
+title: TrackPro
+description: نظام لتتبّع المشكلات للفرق، يغطي المشاريع والتذاكر والأولويات والصلاحيات حسب الدور للمسؤولين ومديري المشاريع والمطوّرين، مع لوحة معلومات تعرض التذاكر حسب الأولوية والحالة برسوم بيانية.
+image: /images/projects/TrackPro/TrackPro-2.jpeg
+url: "https://github.com/SaeedAdam/BugTrackerApp"
+tags: ["ASP.NET Core MVC", "C#", "PostgreSQL", "Bootstrap"]
+date: "2022"

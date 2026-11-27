@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxtjs/i18n'
   ],
 
   devtools: {
@@ -48,13 +49,38 @@ export default defineNuxtConfig({
     }
   },
 
+  fonts: {
+    families: [{
+      // Arabic subset only; Latin falls back to Public Sans (see main.css).
+      name: 'IBM Plex Sans Arabic',
+      provider: 'google',
+      weights: [400, 500, 600, 700],
+      subsets: ['arabic']
+    }]
+  },
+
+  i18n: {
+    baseUrl: 'https://saeedadam.com',
+    defaultLocale: 'en',
+    // English stays at /, Arabic lives under /ar.
+    strategy: 'prefix_except_default',
+    locales: [
+      { code: 'en', language: 'en-US', name: 'English', dir: 'ltr', file: 'en.json' },
+      { code: 'ar', language: 'ar-SA', name: 'العربية', dir: 'rtl', file: 'ar.json' }
+    ],
+    // No automatic redirect: on a static site it would flash the English page first,
+    // and it can hide the English version from crawlers. Visitors use the switcher.
+    detectBrowserLanguage: false
+  },
+
   ogImage: {
     zeroRuntime: true
   },
 
   prerender: {
     routes: [
-      '/'
+      '/',
+      '/ar'
     ],
     crawlLinks: true
   }

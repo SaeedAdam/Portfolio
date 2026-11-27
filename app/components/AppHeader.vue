@@ -1,13 +1,9 @@
 <script setup lang="ts">
-import type { NavigationMenuItem } from '@nuxt/ui'
-
-defineProps<{
-  links: NavigationMenuItem[]
-}>()
+const links = useNavLinks()
 </script>
 
 <template>
-  <div class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10">
+  <div class="fixed top-2 sm:top-4 mx-auto left-1/2 transform -translate-x-1/2 z-10 max-w-[calc(100vw-1rem)]">
     <UNavigationMenu
       :items="links"
       variant="link"
@@ -19,7 +15,10 @@ defineProps<{
       }"
     >
       <template #list-trailing>
-        <ColorModeButton />
+        <div class="flex items-center">
+          <LanguageSwitcher />
+          <ColorModeButton />
+        </div>
       </template>
     </UNavigationMenu>
   </div>

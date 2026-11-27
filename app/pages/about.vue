@@ -1,7 +1,11 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('about', () => {
-  return queryCollection('about').first()
-})
+const { t, locale } = useI18n()
+const collection = useLocalizedCollection('about')
+
+const { data: page } = await useAsyncData(
+  () => `about-${locale.value}`,
+  () => queryCollection(collection.value).first()
+)
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -12,8 +16,8 @@ if (!page.value) {
 
 const { global } = useAppConfig()
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = computed(() => page.value?.seo?.title || page.value?.title)
+const description = computed(() => page.value?.seo?.description || page.value?.description)
 
 useSeoMeta({
   title,
@@ -22,7 +26,10 @@ useSeoMeta({
   ogDescription: description
 })
 
-defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
+// Arabic pages reuse the English OG image (no Arabic font in the renderer).
+defineOgImage('Portfolio', locale.value === 'ar'
+  ? { headline: t('meta.ogHeadline'), title: t('meta.ogTitle'), description: t('meta.ogDescription') }
+  : { headline: t('meta.ogHeadline'), title: title.value, description: description.value })
 </script>
 
 <template>
@@ -33,16 +40,16 @@ defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
       orientation="horizontal"
       :ui="{
         container: 'lg:flex sm:flex-row items-center',
-        title: 'mx-0! text-left',
-        description: 'mx-0! text-left',
+        title: 'mx-0! text-start',
+        description: 'mx-0! text-start',
         links: 'justify-start'
       }"
     >
       <UColorModeAvatar
-        class="sm:rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-bg"
+        class="sm:rotate-4 sm:rtl:-rotate-4 size-36 rounded-lg ring ring-default ring-offset-3 ring-offset-bg"
         :light="global.picture?.light!"
         :dark="global.picture?.dark!"
-        :alt="global.picture?.alt!"
+        :alt="t('avatarAlt')"
       />
     </UPageHero>
     <UPageSection

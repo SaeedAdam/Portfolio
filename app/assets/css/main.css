@@ -4,7 +4,8 @@
 @source "../../../content/**/*";
 
 @theme static {
-  --font-sans: 'Public Sans', sans-serif;
+  /* Public Sans has no Arabic glyphs; Arabic characters fall through to IBM Plex Sans Arabic. */
+  --font-sans: 'Public Sans', 'IBM Plex Sans Arabic', sans-serif;
   --font-serif: 'Instrument Serif', serif;
 }
 
@@ -22,4 +23,26 @@
     color: #ffffff;
     background-color: #474747;
   }
+}
+
+/* ---------- Arabic / RTL ----------
+   These rules are unlayered, so they win over Tailwind utilities without !important. */
+:lang(ar) {
+  /* Arabic glyphs first. The font only ships the Arabic subset, so Latin words
+     (ASP.NET, Azure...) still render in Public Sans and match the English pages. */
+  --font-sans: 'IBM Plex Sans Arabic', 'Public Sans', sans-serif;
+
+  /* Arabic is a joined script: any letter-spacing (e.g. tracking-tight on headings)
+     pulls connected letters apart. */
+  letter-spacing: 0;
+}
+
+/* Tight heading leading clips Arabic diacritics (tanween, shadda) and tall letters. */
+:lang(ar) :is(h1, h2, h3) {
+  line-height: 1.4;
+}
+
+/* Arabic reads better with a little more room between lines. */
+:lang(ar) :is(p, li) {
+  line-height: 1.9;
 }

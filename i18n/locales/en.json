@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "lang": {
+    "switchLabel": "العربية",
+    "switchAria": "اقرأ هذه الصفحة بالعربية (Read this page in Arabic)"
+  },
+  "theme": {
+    "toDark": "Switch to dark mode",
+    "toLight": "Switch to light mode"
+  },
+  "meta": {
+    "siteName": "Saeed Adam",
+    "ogHeadline": "Saeed Adam",
+    "ogTitle": "Senior Software Engineer",
+    "ogDescription": "Riyadh, Saudi Arabia · Enterprise applications and backend systems with .NET, ASP.NET Core and Azure."
+  },
+  "hero": {
+    "available": "Open to new opportunities"
+  },
+  "about": {
+    "more": "More about me"
+  },
+  "experience": {
+    "at": "at"
+  },
+  "projects": {
+    "viewSource": "View source on GitHub",
+    "screenshot": "Screenshot of {title}"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send message",
+    "orEmail": "or email me at",
+    "honeypot": "Leave this empty:",
+    "sentTitle": "Thank you! Your message has been sent.",
+    "sentBody": "I'll get back to you as soon as I can.",
+    "sendAnother": "Send another message",
+    "errorTitle": "Your message could not be sent",
+    "errorBody": "Please try again, or email me directly at {email}."
+  },
+  "footer": {
+    "credits": "© {year} Saeed Adam"
+  },
+  "social": {
+    "github": "Saeed Adam on GitHub",
+    "linkedin": "Saeed Adam on LinkedIn",
+    "x": "Saeed Adam on X",
+    "email": "Email Saeed Adam"
+  },
+  "error": {
+    "title": "Page not found",
+    "description": "Sorry, this page could not be found."
+  },
+  "avatarAlt": "Portrait of Saeed Adam"
+}

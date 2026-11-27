@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+import type { IndexEnCollectionItem } from '@nuxt/content'
 
 defineProps<{
-  page: IndexCollectionItem
+  page: IndexEnCollectionItem
 }>()
 
+const { t } = useI18n()
 const { global } = useAppConfig()
 const toast = useToast()
 
@@ -37,8 +38,9 @@ async function onSubmit() {
   } catch {
     status.value = 'idle'
     toast.add({
-      title: 'Your message could not be sent',
-      description: `Please try again, or email me directly at ${global.email}.`,
+      title: t('contact.errorTitle'),
+      // U+2066/U+2069 isolate the address so it stays left-to-right inside Arabic text.
+      description: t('contact.errorBody', { email: `⁦${global.email}⁩` }),
       color: 'error',
       icon: 'i-lucide-circle-alert'
     })
@@ -54,8 +56,8 @@ async function onSubmit() {
     :description="page.contact.description"
     :ui="{
       container: 'p-0! gap-6 sm:gap-8',
-      title: 'text-left text-xl sm:text-xl lg:text-2xl font-medium',
-      description: 'text-left mt-2 text-sm sm:text-base lg:text-sm text-muted'
+      title: 'text-start text-xl sm:text-xl lg:text-2xl font-medium',
+      description: 'text-start mt-2 text-sm sm:text-base lg:text-sm text-muted'
     }"
   >
     <div
@@ -68,14 +70,14 @@ async function onSubmit() {
         class="size-8 text-success"
       />
       <p class="mt-2 font-medium text-highlighted">
-        Thank you! Your message has been sent.
+        {{ t('contact.sentTitle') }}
       </p>
       <p class="mt-1 text-sm text-muted">
-        I'll get back to you as soon as I can.
+        {{ t('contact.sentBody') }}
       </p>
       <UButton
         class="mt-4"
-        label="Send another message"
+        :label="t('contact.sendAnother')"
         color="neutral"
         variant="outline"
         @click="status = 'idle'"
@@ -97,7 +99,7 @@ async function onSubmit() {
         :value="FORM_NAME"
       >
       <p class="hidden">
-        <label>Leave this empty: <input
+        <label>{{ t('contact.honeypot') }} <input
           v-model="state.botField"
           name="bot-field"
           tabindex="-1"
@@ -106,7 +108,7 @@ async function onSubmit() {
       </p>
 
       <UFormField
-        label="Name"
+        :label="t('contact.name')"
         name="name"
         required
       >
@@ -114,12 +116,13 @@ async function onSubmit() {
           v-model="state.name"
           name="name"
           autocomplete="name"
+          dir="auto"
           required
           class="w-full"
         />
       </UFormField>
       <UFormField
-        label="Email"
+        :label="t('contact.email')"
         name="email"
         required
       >
@@ -128,23 +131,25 @@ async function onSubmit() {
           name="email"
           type="email"
           autocomplete="email"
+          dir="ltr"
           required
           class="w-full"
         />
       </UFormField>
       <UFormField
-        label="Subject"
+        :label="t('contact.subject')"
         name="subject"
         class="sm:col-span-2"
       >
         <UInput
           v-model="state.subject"
           name="subject"
+          dir="auto"
           class="w-full"
         />
       </UFormField>
       <UFormField
-        label="Message"
+        :label="t('contact.message')"
         name="message"
         required
         class="sm:col-span-2"
@@ -153,6 +158,7 @@ async function onSubmit() {
           v-model="state.message"
           name="message"
           :rows="5"
+          dir="auto"
           required
           class="w-full"
         />
@@ -160,14 +166,16 @@ async function onSubmit() {
       <div class="sm:col-span-2 flex flex-wrap items-center gap-3">
         <UButton
           type="submit"
-          label="Send message"
+          :label="t('contact.send')"
           icon="i-lucide-send"
+          :ui="{ leadingIcon: 'rtl:-scale-x-100' }"
           :loading="status === 'sending'"
         />
         <span class="text-sm text-muted">
-          or email me at
+          {{ t('contact.orEmail') }}
           <ULink
             :to="`mailto:${global.email}`"
+            dir="ltr"
             class="text-primary"
           >{{ global.email }}</ULink>
         </span>

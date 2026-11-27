@@ -3,7 +3,7 @@ export default defineAppConfig({
     picture: {
       dark: '/images/avatar.jpg',
       light: '/images/avatar.jpg',
-      alt: 'Portrait of Saeed Adam'
+      alt: 'Portrait of Saeed Adam' // translated via `avatarAlt` in i18n/locales
     },
     email: 'sandeed70@gmail.com',
     // Shows an "Open to new opportunities" badge in the hero when true.
@@ -25,23 +25,27 @@ export default defineAppConfig({
     }
   },
   footer: {
-    credits: `© ${new Date().getFullYear()} Saeed Adam`,
+    // `id` picks the translated aria-label (`social.<id>` in i18n/locales); see useSocialLinks().
     links: [{
+      'id': 'github',
       'icon': 'i-simple-icons-github',
       'to': 'https://github.com/SaeedAdam',
       'target': '_blank',
       'aria-label': 'Saeed Adam on GitHub'
     }, {
+      'id': 'linkedin',
       'icon': 'i-simple-icons-linkedin',
       'to': 'https://www.linkedin.com/in/saeedadam',
       'target': '_blank',
       'aria-label': 'Saeed Adam on LinkedIn'
     }, {
+      'id': 'x',
       'icon': 'i-simple-icons-x',
       'to': 'https://x.com/SaeedAdam1',
       'target': '_blank',
       'aria-label': 'Saeed Adam on X'
     }, {
+      'id': 'email',
       'icon': 'i-lucide-mail',
       'to': 'mailto:sandeed70@gmail.com',
       'aria-label': 'Email Saeed Adam'

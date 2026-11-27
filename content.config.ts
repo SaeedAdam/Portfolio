@@ -15,55 +15,68 @@ const createButtonSchema = () => z.object({
   target: z.enum(['_blank', '_self']).optional()
 })
 
+// One set of collections per locale (content/en, content/ar), all sharing a schema.
+// Pages query `<name>_<locale>`, e.g. `index_ar`; see app/composables/useLocalizedContent.ts.
+const locales = ['en', 'ar'] as const
+
+const indexSchema = z.object({
+  hero: z.object({
+    links: z.array(createButtonSchema())
+  }),
+  about: createBaseSchema(),
+  experience: z.object({
+    title: z.string(),
+    items: z.array(z.object({
+      date: z.string(),
+      position: z.string(),
+      summary: z.string().optional(),
+      company: z.object({
+        name: z.string(),
+        url: z.string().optional()
+      })
+    }))
+  }),
+  contact: createBaseSchema()
+})
+
+const projectSchema = z.object({
+  title: z.string().nonempty(),
+  description: z.string().nonempty(),
+  image: z.string().nonempty().editor({ input: 'media' }),
+  url: z.string().nonempty(),
+  tags: z.array(z.string()),
+  date: z.string()
+})
+
+const pagesSchema = z.object({
+  links: z.array(createButtonSchema())
+})
+
+const localized = <T>(build: (locale: typeof locales[number]) => T) =>
+  Object.fromEntries(locales.map(locale => [locale, build(locale)])) as Record<typeof locales[number], T>
+
+const index = localized(locale => defineCollection({
+  type: 'page', source: `${locale}/index.yml`, schema: indexSchema
+}))
+const projects = localized(locale => defineCollection({
+  type: 'data', source: `${locale}/projects/*.yml`, schema: projectSchema
+}))
+const pages = localized(locale => defineCollection({
+  type: 'page', source: `${locale}/projects.yml`, schema: pagesSchema
+}))
+const about = localized(locale => defineCollection({
+  type: 'page', source: `${locale}/about.md`
+}))
+
 export default defineContentConfig({
   collections: {
-    index: defineCollection({
-      type: 'page',
-      source: 'index.yml',
-      schema: z.object({
-        hero: z.object({
-          links: z.array(createButtonSchema())
-        }),
-        about: createBaseSchema(),
-        experience: z.object({
-          title: z.string(),
-          items: z.array(z.object({
-            date: z.string(),
-            position: z.string(),
-            summary: z.string().optional(),
-            company: z.object({
-              name: z.string(),
-              url: z.string().optional()
-            })
-          }))
-        }),
-        contact: createBaseSchema()
-      })
-    }),
-    projects: defineCollection({
-      type: 'data',
-      source: 'projects/*.yml',
-      schema: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        image: z.string().nonempty().editor({ input: 'media' }),
-        url: z.string().nonempty(),
-        tags: z.array(z.string()),
-        date: z.string()
-      })
-    }),
-    pages: defineCollection({
-      type: 'page',
-      source: [
-        { include: 'projects.yml' }
-      ],
-      schema: z.object({
-        links: z.array(createButtonSchema())
-      })
-    }),
-    about: defineCollection({
-      type: 'page',
-      source: 'about.md'
-    })
+    index_en: index.en,
+    index_ar: index.ar,
+    projects_en: projects.en,
+    projects_ar: projects.ar,
+    pages_en: pages.en,
+    pages_ar: pages.ar,
+    about_en: about.en,
+    about_ar: about.ar
   }
 })

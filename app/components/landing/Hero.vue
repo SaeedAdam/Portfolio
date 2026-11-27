@@ -1,10 +1,12 @@
 <script setup lang="ts">
-import type { IndexCollectionItem } from '@nuxt/content'
+import type { IndexEnCollectionItem } from '@nuxt/content'
 
-const { footer, global } = useAppConfig()
+const { t } = useI18n()
+const { global } = useAppConfig()
+const socialLinks = useSocialLinks()
 
 defineProps<{
-  page: IndexCollectionItem
+  page: IndexEnCollectionItem
 }>()
 
 const reveal = {
@@ -30,7 +32,7 @@ const reveal = {
           class="size-24 ring ring-default ring-offset-3 ring-offset-bg"
           :light="global.picture?.light!"
           :dark="global.picture?.dark!"
-          :alt="global.picture?.alt!"
+          :alt="t('avatarAlt')"
         />
       </Motion>
     </template>
@@ -67,7 +69,7 @@ const reveal = {
             <span class="absolute inline-flex size-full rounded-full bg-success opacity-75 animate-ping" />
             <span class="relative inline-flex size-2 scale-90 rounded-full bg-success" />
           </span>
-          Open to new opportunities
+          {{ t('hero.available') }}
         </div>
         <div
           v-if="page.hero.links"
@@ -83,7 +85,7 @@ const reveal = {
 
       <div class="gap-x-4 inline-flex mt-4">
         <Motion
-          v-for="(link, index) of footer?.links"
+          v-for="(link, index) of socialLinks"
           :key="index"
           v-bind="reveal"
           :transition="{ duration: 0.6, delay: 0.5 + index * 0.1 }"

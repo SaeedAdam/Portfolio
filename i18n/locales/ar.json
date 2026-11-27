@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "المشاريع",
+    "about": "نبذة عني",
+    "contact": "تواصل"
+  },
+  "lang": {
+    "switchLabel": "English",
+    "switchAria": "Read this page in English (اقرأ هذه الصفحة بالإنجليزية)"
+  },
+  "theme": {
+    "toDark": "التبديل إلى الوضع الداكن",
+    "toLight": "التبديل إلى الوضع الفاتح"
+  },
+  "meta": {
+    "siteName": "سعيد آدم",
+    "ogHeadline": "Saeed Adam",
+    "ogTitle": "Senior Software Engineer",
+    "ogDescription": "Riyadh, Saudi Arabia · Enterprise applications and backend systems with .NET, ASP.NET Core and Azure."
+  },
+  "hero": {
+    "available": "متاح لفرص جديدة"
+  },
+  "about": {
+    "more": "المزيد عني"
+  },
+  "experience": {
+    "at": "في"
+  },
+  "projects": {
+    "viewSource": "عرض الشيفرة المصدرية على GitHub",
+    "screenshot": "لقطة شاشة من مشروع {title}"
+  },
+  "contact": {
+    "name": "الاسم",
+    "email": "البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "إرسال الرسالة",
+    "orEmail": "أو راسلني مباشرة على",
+    "honeypot": "اترك هذا الحقل فارغًا:",
+    "sentTitle": "شكرًا لك! تم إرسال رسالتك.",
+    "sentBody": "سأعود إليك في أقرب وقت ممكن.",
+    "sendAnother": "إرسال رسالة أخرى",
+    "errorTitle": "تعذّر إرسال رسالتك",
+    "errorBody": "يرجى المحاولة مرة أخرى، أو مراسلتي مباشرة على {email}."
+  },
+  "footer": {
+    "credits": "© {year} سعيد آدم"
+  },
+  "social": {
+    "github": "سعيد آدم على GitHub",
+    "linkedin": "سعيد آدم على LinkedIn",
+    "x": "سعيد آدم على X",
+    "email": "راسل سعيد آدم عبر البريد الإلكتروني"
+  },
+  "error": {
+    "title": "الصفحة غير موجودة",
+    "description": "عذرًا، لم نتمكن من العثور على هذه الصفحة."
+  },
+  "avatarAlt": "صورة سعيد آدم"
+}

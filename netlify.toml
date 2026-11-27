@@ -1,5 +1,8 @@
-# <PLACEHOLDER: confirm saeedadam.com is still hosted on Netlify. The contact
-# form relies on Netlify Forms; on other hosts it needs a different backend.>
 [build]
   command = "pnpm run generate"
   publish = ".output/public"
+
+[build.environment]
+  # Nuxt 4 requires Node ^22.22.3 || ^24.15.0 || >=26. Overrides the old
+  # Node 16 default left in the site settings from the static HTML site.
+  NODE_VERSION = "24"

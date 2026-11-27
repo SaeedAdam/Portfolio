@@ -26,7 +26,7 @@ defineProps<{
         class="ps-6 relative"
       >
         <span
-          class="absolute -start-1.5 top-1.5 size-3 rounded-full ring-4 ring-bg"
+          class="absolute -inset-s-1.5 top-1.5 size-3 rounded-full ring-4 ring-bg"
           :class="index === 0 ? 'bg-primary' : 'bg-accented'"
         />
         <p class="text-xs text-muted">

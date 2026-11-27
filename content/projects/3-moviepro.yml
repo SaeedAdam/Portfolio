@@ -1,0 +1,6 @@
+title: MoviePro
+description: A web application for managing a movie collection, pulling movie data from the TMDB API and storing it in PostgreSQL.
+image: /images/projects/MoviePro/MoviePro-1.jpeg
+url: "https://github.com/SaeedAdam/MoviePro"
+tags: [".NET 6 MVC", "C#", "TMDB API", "PostgreSQL"]
+date: "2022"

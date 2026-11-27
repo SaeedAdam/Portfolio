@@ -1,0 +1,6 @@
+title: SuggestionPro
+description: A .NET 6 Blazor Server application where users suggest and upvote training topics, built to scale to thousands of visitors. It uses MongoDB for data access and Azure Active Directory B2C for authentication and authorization.
+image: /images/projects/SuggestionPro/SuggestionPro-1.png
+url: "https://github.com/SaeedAdam/SuggestionSiteApp"
+tags: ["Blazor Server", ".NET 6", "MongoDB", "Azure AD B2C"]
+date: "2022"

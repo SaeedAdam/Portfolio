@@ -1,0 +1,10 @@
+[build]
+  command = "pnpm run generate"
+  # On Netlify, Nuxt switches to the netlify-static preset, which writes to dist/
+  # (locally, `pnpm generate` writes to .output/public instead).
+  publish = "dist"
+
+[build.environment]
+  # Nuxt 4 requires Node ^22.22.3 || ^24.15.0 || >=26. Overrides the old
+  # Node 16 default left in the site settings from the static HTML site.
+  NODE_VERSION = "24"

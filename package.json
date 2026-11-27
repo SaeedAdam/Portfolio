@@ -1,0 +1,40 @@
+{
+  "name": "saeedadam-portfolio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.158",
+    "@iconify-json/simple-icons": "^1.2.103",
+    "@nuxt/content": "^3.17.0",
+    "@nuxt/image": "^2.2.1",
+    "@nuxt/ui": "^4.13.0",
+    "@takumi-rs/core": "^2.22.1",
+    "@vueuse/nuxt": "^14.4.0",
+    "motion-v": "^2.13.0",
+    "nuxt": "^4.7.0",
+    "nuxt-og-image": "^7.0.7",
+    "tailwindcss": "^4.3.5",
+    "ufo": "^1.6.4"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.17.0",
+    "eslint": "^10.15.0",
+    "eslint-plugin-better-tailwindcss": "^4.11.0",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.14"
+  },
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
+  "packageManager": "pnpm@12.21.0"
+}

@@ -1,0 +1,56 @@
+seo:
+  title: "Saeed Adam - Senior Software Engineer (.NET)"
+  description: "Saeed Adam is a Senior Software Engineer in Riyadh, Saudi Arabia, building reliable, maintainable enterprise applications and backend systems with ASP.NET Core, DDD, SQL Server/PostgreSQL and Azure."
+title: "Hi, I'm Saeed Adam. Senior Software Engineer."
+description: "Product-minded .NET engineer based in Riyadh, building reliable enterprise applications and backend systems with ASP.NET Core and Azure."
+hero:
+  links:
+    - label: "View my work"
+      to: /projects
+      color: "neutral"
+    - label: "Get in touch"
+      to: "#contact"
+      color: "neutral"
+      variant: "outline"
+about:
+  title: "About Me"
+  description: |
+    I'm a Senior .NET Engineer focused on building reliable, maintainable enterprise applications and backend systems. I work primarily with ASP.NET Core, Domain-Driven Design, SQL Server/PostgreSQL, Docker and Azure DevOps, and I'm comfortable across the stack with Angular, Vue.js and Nuxt.
+
+    I enjoy turning complex business workflows into clean, well-structured systems that teams can keep changing with confidence. I care about understanding the problem before writing code, and about shipping the simplest solution that actually solves it.
+experience:
+  title: Work Experience
+  items:
+    - date: "Sep 2026 - Present"
+      position: "Senior Software Engineer"
+      company:
+        name: Ebttikar Technology Company
+      summary: "Leading the design and delivery of enterprise backend services with .NET Core, working across the delivery pipeline in Azure DevOps and building Nuxt frontends alongside the APIs."
+    - date: "Aug 2025 - Sep 2026"
+      position: "Senior .NET Developer"
+      company:
+        name: Ebttikar Technology Company
+      summary: "Designed and developed enterprise backend services and APIs using ASP.NET Core, applying DDD and pragmatic architectural patterns to support complex business workflows."
+    - date: "Jan 2025 - Aug 2025"
+      position: "Full-stack .NET Developer"
+      company:
+        name: Kafaat Business Solutions
+      summary: "Built modular enterprise web applications using ASP.NET Core and ABP Framework, with Angular and Vue.js frontends."
+    - date: "Jan 2023 - Jan 2025"
+      position: ".NET Developer"
+      company:
+        name: solutions by stc
+      summary: "Developed backend APIs and frontend modules using .NET, Angular and Vue.js for enterprise telecom applications."
+    - date: "Mar 2022 - Dec 2022"
+      position: "Software Developer"
+      company:
+        name: Raya Talents
+      summary: "Maintained and extended ASP.NET Core backend services and Angular UIs, and delivered key features in sprints while improving codebase performance."
+    - date: "Nov 2021 - Jan 2022"
+      position: "Software Developer (Contract, Remote)"
+      company:
+        name: Chingu
+      summary: "Contributed Vue.js components to a team-based open-source project, working in Agile sprints with planning and demos."
+contact:
+  title: "Get in Touch"
+  description: "Have a role, a project or a question? Send me a message and I'll get back to you."

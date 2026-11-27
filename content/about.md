@@ -15,16 +15,16 @@ Along the way I've worked on enterprise telecom applications at solutions by stc
 
 I think like a product-minded engineer. Before I write code I want to understand the user, the business problem and the outcome we're after, and then pick the simplest solution that actually solves it. I care about clean architecture and SOLID principles because they keep systems easy to change, not as an end in themselves.
 
-\<PLACEHOLDER: a short paragraph on something specific you're proud of, e.g. a hard problem you solved, a system you scaled or a team practice you introduced.\>
+What I'm most proud of is the path itself: in about five years I went from contributing Vue.js components to a remote open-source team to designing enterprise backend services as a senior engineer. Each step, from telecom-scale applications at stc to modular ABP platforms and DDD-based services, taught me that good software comes from understanding the domain first and the framework second.
 
 ### Education & Certifications
 
 - **Associate of Science in Computer Science**, University of the People (2020 - 2022)
 - **Microsoft Full-Stack Developer Professional Certificate**, Microsoft (2025)
-- \<PLACEHOLDER: other certifications you want to highlight (LinkedIn lists 8)\>
+- **French Language Certificate**, Mohammed V University in Rabat (2013)
 
 ### Languages
 
-Arabic (native), English (professional working proficiency), \<PLACEHOLDER: other languages\>.
+Arabic (native), English (professional working proficiency) and French.
 
 Thanks for stopping by. Browse my [projects](/projects) or [get in touch](/#contact).

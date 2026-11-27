@@ -17,7 +17,7 @@ about:
   description: |
     I'm a Senior .NET Engineer focused on building reliable, maintainable enterprise applications and backend systems. I work primarily with ASP.NET Core, Domain-Driven Design, SQL Server/PostgreSQL, Docker and Azure DevOps, and I'm comfortable across the stack with Angular, Vue.js and Nuxt.
 
-    <PLACEHOLDER: one or two sentences on the kind of problems you enjoy solving or the impact you've had, e.g. a system you scaled or a process you improved.>
+    I enjoy turning complex business workflows into clean, well-structured systems that teams can keep changing with confidence. I care about understanding the problem before writing code, and about shipping the simplest solution that actually solves it.
 experience:
   title: Work Experience
   items:
@@ -25,7 +25,7 @@ experience:
       position: "Senior Software Engineer"
       company:
         name: Ebttikar Technology Company
-      summary: "<PLACEHOLDER: what you own in this role and one concrete result.>"
+      summary: "Leading the design and delivery of enterprise backend services with .NET Core, working across the delivery pipeline in Azure DevOps and building Nuxt frontends alongside the APIs."
     - date: "Aug 2025 - Sep 2026"
       position: "Senior .NET Developer"
       company:

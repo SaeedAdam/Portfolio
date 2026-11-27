@@ -1,7 +1,12 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('projects-page', () => {
-  return queryCollection('pages').path('/projects').first()
-})
+const { t, locale } = useI18n()
+const pagesCollection = useLocalizedCollection('pages')
+const projectsCollection = useLocalizedCollection('projects')
+
+const { data: page } = await useAsyncData(
+  () => `projects-page-${locale.value}`,
+  () => queryCollection(pagesCollection.value).first()
+)
 if (!page.value) {
   throw createError({
     statusCode: 404,
@@ -10,12 +15,13 @@ if (!page.value) {
   })
 }
 
-const { data: projects } = await useAsyncData('projects', () => {
-  return queryCollection('projects').order('stem', 'ASC').all()
-})
+const { data: projects } = await useAsyncData(
+  () => `projects-${locale.value}`,
+  () => queryCollection(projectsCollection.value).order('stem', 'ASC').all()
+)
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = computed(() => page.value?.seo?.title || page.value?.title)
+const description = computed(() => page.value?.seo?.description || page.value?.description)
 
 useSeoMeta({
   title,
@@ -24,7 +30,10 @@ useSeoMeta({
   ogDescription: description
 })
 
-defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
+// Arabic pages reuse the English OG image (no Arabic font in the renderer).
+defineOgImage('Portfolio', locale.value === 'ar'
+  ? { headline: t('meta.ogHeadline'), title: t('meta.ogTitle'), description: t('meta.ogDescription') }
+  : { headline: t('meta.ogHeadline'), title: title.value, description: description.value })
 </script>
 
 <template>
@@ -33,8 +42,8 @@ defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
       :title="page.title"
       :description="page.description"
       :ui="{
-        title: 'mx-0! text-left',
-        description: 'mx-0! text-left',
+        title: 'mx-0! text-start',
+        description: 'mx-0! text-start',
         links: 'justify-start'
       }"
     >
@@ -83,11 +92,13 @@ defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
             </span>
           </template>
           <template #footer>
+            <!-- Tech names are English: dir=ltr keeps ".NET 6" from rendering as "NET 6." in RTL -->
             <div class="flex flex-wrap gap-1.5">
               <UBadge
                 v-for="tag in project.tags"
                 :key="tag"
                 :label="tag"
+                dir="ltr"
                 color="neutral"
                 variant="subtle"
               />
@@ -97,16 +108,16 @@ defineOgImage('Portfolio', { headline: 'Saeed Adam', title, description })
                 name="i-simple-icons-github"
                 class="size-4"
               />
-              View source on GitHub
+              {{ t('projects.viewSource') }}
               <UIcon
                 name="i-lucide-arrow-right"
-                class="size-4 transition-all opacity-0 group-hover:translate-x-1 group-hover:opacity-100"
+                class="size-4 transition-all opacity-0 group-hover:opacity-100 group-hover:translate-x-1 rtl:-scale-x-100 rtl:group-hover:-translate-x-1"
               />
             </span>
           </template>
           <img
             :src="project.image"
-            :alt="`Screenshot of ${project.title}`"
+            :alt="t('projects.screenshot', { title: project.title })"
             loading="lazy"
             class="object-cover object-top w-full h-48 rounded-lg ring ring-default"
           >

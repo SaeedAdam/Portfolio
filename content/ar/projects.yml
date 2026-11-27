@@ -1,0 +1,11 @@
+title: المشاريع
+description: مجموعة من التطبيقات التي بنيتها بنفسي، من تتبّع المشكلات إلى منصات جمع آراء المجتمع. يرتبط كل مشروع بشيفرته المصدرية على GitHub.
+links:
+  - label: "تواصل معي"
+    to: "/ar#contact"
+    color: "neutral"
+  - label: "حسابي على GitHub"
+    to: "https://github.com/SaeedAdam"
+    target: "_blank"
+    variant: "outline"
+    color: "neutral"

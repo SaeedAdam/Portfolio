@@ -1,6 +1,6 @@
 seo:
   title: "Saeed Adam - Senior Software Engineer (.NET)"
-  description: "Saeed Adam is a Senior Software Engineer in Riyadh, Saudi Arabia, building reliable, maintainable enterprise applications and backend systems with ASP.NET Core, DDD, SQL Server/PostgreSQL and Azure."
+  description: "Saeed Adam is a Senior Software Engineer in Riyadh, Saudi Arabia, building reliable, maintainable enterprise applications and backend systems with ASP.NET Core, DDD, SQL Server, PostgreSQL and Azure."
 title: "Hi, I'm Saeed Adam. Senior Software Engineer."
 description: "Product-minded .NET engineer based in Riyadh, building reliable enterprise applications and backend systems with ASP.NET Core and Azure."
 hero:
@@ -15,9 +15,9 @@ hero:
 about:
   title: "About Me"
   description: |
-    I'm a Senior .NET Engineer focused on building reliable, maintainable enterprise applications and backend systems. I work primarily with ASP.NET Core, Domain-Driven Design, SQL Server/PostgreSQL, Docker and Azure DevOps, and I'm comfortable across the stack with Angular, Vue.js and Nuxt.
+    I'm a Senior .NET Engineer focused on building reliable, maintainable enterprise applications and backend systems. I work mainly with ASP.NET Core, Domain-Driven Design (DDD), SQL Server, PostgreSQL, Docker and Azure DevOps, and I'm just as comfortable on the frontend with Angular, Vue.js and Nuxt.
 
-    I enjoy turning complex business workflows into clean, well-structured systems that teams can keep changing with confidence. I care about understanding the problem before writing code, and about shipping the simplest solution that actually solves it.
+    I enjoy turning complex business workflows into clear systems that teams can keep changing with confidence. I understand the problem first, then ship the simplest solution that actually solves it.
 experience:
   title: Work Experience
   items:
@@ -25,7 +25,7 @@ experience:
       position: "Senior Software Engineer"
       company:
         name: Ebttikar Technology Company
-      summary: "Leading the design and delivery of enterprise backend services with .NET Core, working across the delivery pipeline in Azure DevOps and building Nuxt frontends alongside the APIs."
+      summary: "Leading the design and delivery of enterprise backend services with .NET Core, working on the delivery pipeline in Azure DevOps, and building Nuxt frontends alongside the APIs."
     - date: "Aug 2025 - Sep 2026"
       position: "Senior .NET Developer"
       company:
@@ -45,7 +45,7 @@ experience:
       position: "Software Developer"
       company:
         name: Raya Talents
-      summary: "Maintained and extended ASP.NET Core backend services and Angular UIs, and delivered key features in sprints while improving codebase performance."
+      summary: "Maintained and extended ASP.NET Core backend services and Angular UIs, and delivered key features each sprint while improving performance across the codebase."
     - date: "Nov 2021 - Jan 2022"
       position: "Software Developer (Contract, Remote)"
       company:

@@ -20,17 +20,17 @@
     "ogDescription": "Riyadh, Saudi Arabia · Enterprise applications and backend systems with .NET, ASP.NET Core and Azure."
   },
   "hero": {
-    "available": "متاح لفرص جديدة"
+    "available": "متاح لفرص عمل جديدة"
   },
   "about": {
-    "more": "المزيد عني"
+    "more": "تعرّف عليّ أكثر"
   },
   "experience": {
     "at": "في"
   },
   "projects": {
-    "viewSource": "عرض الشيفرة المصدرية على GitHub",
-    "screenshot": "لقطة شاشة من مشروع {title}"
+    "viewSource": "شاهد الكود على GitHub",
+    "screenshot": "صورة من مشروع {title}"
   },
   "contact": {
     "name": "الاسم",
@@ -38,13 +38,13 @@
     "subject": "الموضوع",
     "message": "الرسالة",
     "send": "إرسال الرسالة",
-    "orEmail": "أو راسلني مباشرة على",
+    "orEmail": "أو راسلني على",
     "honeypot": "اترك هذا الحقل فارغًا:",
-    "sentTitle": "شكرًا لك! تم إرسال رسالتك.",
-    "sentBody": "سأعود إليك في أقرب وقت ممكن.",
+    "sentTitle": "شكرًا لك! وصلتني رسالتك.",
+    "sentBody": "سأرد عليك في أقرب وقت.",
     "sendAnother": "إرسال رسالة أخرى",
     "errorTitle": "تعذّر إرسال رسالتك",
-    "errorBody": "يرجى المحاولة مرة أخرى، أو مراسلتي مباشرة على {email}."
+    "errorBody": "حاول مرة أخرى، أو راسلني مباشرة على {email}."
   },
   "footer": {
     "credits": "© {year} سعيد آدم"
@@ -53,11 +53,11 @@
     "github": "سعيد آدم على GitHub",
     "linkedin": "سعيد آدم على LinkedIn",
     "x": "سعيد آدم على X",
-    "email": "راسل سعيد آدم عبر البريد الإلكتروني"
+    "email": "راسل سعيد آدم"
   },
   "error": {
     "title": "الصفحة غير موجودة",
-    "description": "عذرًا، لم نتمكن من العثور على هذه الصفحة."
+    "description": "عذرًا، لم نجد هذه الصفحة."
   },
   "avatarAlt": "صورة سعيد آدم"
 }

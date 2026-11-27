@@ -1,5 +1,5 @@
 title: MoviePro
-description: تطبيق ويب لإدارة مجموعة أفلام، يجلب بيانات الأفلام من واجهة TMDB البرمجية ويخزّنها في PostgreSQL.
+description: تطبيق ويب لإدارة مجموعة أفلام، يجلب بياناتها من واجهة TMDB البرمجية ويخزّنها في PostgreSQL.
 image: /images/projects/MoviePro/MoviePro-1.jpeg
 url: "https://github.com/SaeedAdam/MoviePro"
 tags: ["‎.NET 6 MVC", "C#", "TMDB API", "PostgreSQL"]
